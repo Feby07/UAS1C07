@@ -10,7 +10,7 @@ public class UAS1C07 {
         Scanner sc = new Scanner(System.in);
         boolean ulangi07 =  true;
 
-        while ( ulangi ) {
+        while ( ulangi07 ) {
             System.out.println("=== MENU UTAMA ===");
             System.out.println("1. Input Data Skor Tim");
             System.out.println("2. Tampilkan Tabel Skor");
@@ -50,18 +50,25 @@ public class UAS1C07 {
 
         do {
             System.out.print("Masukkan skor " + tim07[i] + " untuk level 1: " );
-            int level107 =  new Scanner(Syetem.in);
+            int level107 =  sc.nextInt();
 
             if (level107 < 0) {
-                Sytem.out.println("Skor harus bilangan positif");
+                System.out.println("Skor harus bilangan positif");
             } else if (level107 < 35) {
                 level107 = 0;
             }
-        } while (level107 > 0);
+        } while (  level107 > 0);
 
         do {
             System.out.println("Masukkan skor " + tim07[i] + " untuk level 2: ");
-            int level207 = new Scanner(System.in);
+            int level207 = sc.nextInt();
         } while (level207 > 0);
+        skorTim07[i][0] = level107;
+        skorTim07[i][1] = level107;
+    }
+    public static void tampilkanTabel() {
+        System.out.printf("%-20s %-10s %-10s %-10s%n", "Nama Tim", "Level 1", "Level 2", "Total Skor");
+        int totalSkor;
+        
     }
 }
